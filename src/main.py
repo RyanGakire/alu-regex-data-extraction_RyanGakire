@@ -27,3 +27,15 @@ print("\nALU official accounts: \n", alu_official)
 print("\nALU Alumni accounts: \n", alu_alumni)
 print("\nALU Si accounts: \n", alu_si)
 print("\nOther valid emails: \n", other_emails)
+
+phoneNos_intl = re.findall(r"\+250[ -]?(?:\(0\))?[ -]?7[98532]\d[ -]?\d{3}[ -]?\d{3}", text)
+print("\nInternational format phone numbers:\n", phoneNos_intl)
+
+phoneNos_local = re.findall(r"07[98532]\d{7}", text)
+print("\nLocal format phone numbers:\n", phoneNos_local)
+
+creditCard = re.findall(r"\d{4}[ -]?\d{4}[ -]?\d{4}[ -]?\d{4}\b", text)
+print("\nValid Credit cards:\n", creditCard)
+
+url = re.findall(r"https?://[A-Za-z0-9_.-]+(?:/[A-Za-z0-9_?=-]+)*", text)
+print("\nValid URLs:\n", url)
