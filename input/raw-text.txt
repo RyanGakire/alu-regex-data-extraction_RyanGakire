@@ -1,0 +1,35 @@
+================================================================================
+SECTION 1: PAYMENT SYSTEM APPLICATION LOGS [ENVIRONMENT: SANDBOX_TEST]
+================================================================================
+2026-09-06 09:42:01 [INFO] session_id="SESS_99218" url="https://paymentsystem.com" msg="Initiating primary gateway handshake."
+2026-09-06 09:42:03 [DEBUG] user_email="johndoe88@gmail.com" phone="+250 788 123 456" ip="197.243.12.45" msg="Validating user contact details."
+2026-09-06 09:42:05 [INFO] gateway="Stripe" action="TOKENIZE_CARD" payload="{\"card_num\":\"4111111111111111\",\"exp\":\"12/29\",\"cvc\":\"***\"}"
+2026-09-06 09:42:06 [WARN] status="DECLINED" reason="SUSPECTED_FRAUD" url="https://paymentsystem.com" card_num="4222-2222-2222-2222"
+2026-09-06 09:43:12 [INFO] session_id="SESS_99219" url="https://api.paymentsystem.com/v1/checkout" msg="ALU student subscription validation sequence initiated."
+2026-09-06 09:43:15 [DEBUG] profile="ALU_STU" email="john@alueducation.com" phone="+250-733-987-654" msg="System auto-filled saved billing profile."
+2026-09-06 09:43:18 [INFO] gateway="Adyen" action="AUTHORIZE" card_num="5555 5555 5555 4444" status="SUCCESS" tx_id="TX_992811"
+2026-09-06 09:44:00 [ERROR] process="ALERT_TRIGGER" type="DATA_LEAK" msg="Unmasked PII detected in standard out stream."
+2026-09-06 09:45:11 [WARN] session_id="SESS_99220" url="https://paymentsystem.com/orders/99218?status=pending" msg="Callback timeout from endpoint."
+2026-09-06 09:46:02 [ERROR] validation_failure="INVALID_EMAIL" raw_field="john@@example.com" msg="Rejecting unexpected string sequence during pipeline validation."
+2026-09-06 09:47:19 [INFO] session_id="SESS_99221" user="clara_dev_testing@company.io" phone="+250 (0) 722 555 666" msg="Attempting payment reconciliation."
+2026-09-06 09:48:04 [WARN] input_validation="MALFORMED_CARD" card_num="4111-111111-11111" msg="Card rejected due to block profile mismatch."
+2026-09-06 09:50:55 [INFO] academic_billing="ALU_ALUMNI" email="alumni_finance@alumni.alueducation.com" msg="Processing batch donation request."
+2026-09-06 09:52:10 [ERROR] network_error="BAD_URL" target="https://:://paymentsystem.com" msg="Failed parsing target route syntax error."
+2026-09-06 09:55:34 [WARN] gateway="Stripe" action="VALIDATE_INPUT" field="first_name" untrusted_input="<script>fetch('https://attacker.com)</script>" msg="Sanitization module dropped script block."
+2026-09-06 10:10:22 [INFO] session_id="SESS_99224" url="http://paymentsystem.com" msg="Downgrading handshake protocol cleanly to standard port."
+
+================================================================================
+SECTION 2: CUSTOMER SUPPORT TICKET DATA [UNTRUSTED EXTERNAL INPUTS]
+================================================================================
+2026-09-06 10:15:42 [TICKET] id="TCK-18421" user="john.doe@alueducation.com" msg="I was charged twice for my subscription order. I used my Visa card 4111 1111 1111 1111 and the transaction was processed around 09:15. Please contact me back at r.gakire@alueducation.com or call +250 788 123 456."
+2026-09-06 10:18:01 [TICKET] id="TCK-18422" user="customer_441" msg="Hey, my transaction failed while visiting https://paymentsystem.com/orders/99218?status=pending. The page hung up entirely. My contact is john.doe@alueducation.com. Please fix this soon."
+2026-09-06 10:22:15 [TICKET] id="TCK-18423" user="customer_901" msg="Hello finance desk! Can you update my record? My new phone number is 0789456123. Send the billing token updates straight to student.billing@si.alueducation.com."
+2026-09-06 10:25:30 [TICKET] id="TCK-18424" user="customer_702" msg="I am testing the portal registration from Kigali. My email is john@@example.com and my phone number is +250-788-123-abc. Let me know if the system allows this creation."
+2026-09-06 10:31:04 [TICKET] id="TCK-18425" user="customer_338" msg="Account override attempt testing entry point. My profile email is @example.com, and my database query string is ' OR '1'='1' --"
+2026-09-06 10:35:12 [TICKET] id="TCK-18426" user="customer_114" msg="The mobile application link at http:/missing-slash.com throws an error code when clicked. Please ping my mobile line +250 (0) 722 555 666 when the patch goes live."
+2026-09-06 10:40:55 [TICKET] id="TCK-18427" user="customer_084" msg="I ran into a problem on https://api.paymentsystem.com/v1/checkout. I attempted checking out using card number 5555_5555_5555_4444 but it failed. Contact support@backup-service.net for system logs."
+2026-09-06 10:44:18 [TICKET] id="TCK-18428" user="customer_612" msg="Please adjust my subscriber phone details from the current truncated number +250 788 123 to my active working business line 0755000111."
+2026-09-06 10:49:00 [TICKET] id="TCK-18429" user="customer_505" msg="My registration form wouldn't let me process my username string john.example.com or my backup line 0685123456. Is your platform currently down?"
+2026-09-06 10:52:11 [TICKET] id="TCK-18430" user="customer_002" msg="Can you verify if this payment link works? https://paymentsystem.com. I keep getting redirected here instead of the dashboard. Please resolve."
+2026-09-06 10:55:18 [TICKET] id="TCK-18431" user="customer_944" msg="I kept getting sent back to https://paymentsystem.com during checkout. My balance wasn't deducted. Also, someone texted me from a strange email address: someone@notalueducation.com."
+2026-09-06 10:58:40 [TICKET] id="TCK-18432" user="customer_109" msg="The endpoint at https://paymentsystem.com dropped my payload. Please check your web server logs. Contact student@alueducation.com.fake for issues."
