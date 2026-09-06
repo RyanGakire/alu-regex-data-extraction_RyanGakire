@@ -1,0 +1,57 @@
+{
+  "alu_official": [
+    "john@alueducation.com",
+    "john.doe@alueducation.com",
+    "r.gakire@alueducation.com",
+    "john.doe@alueducation.com"
+  ],
+  "alu_alumni": [
+    "alumni_finance@alumni.alueducation.com"
+  ],
+  "alu_si": [
+    "student.billing@si.alueducation.com"
+  ],
+  "other_emails": [
+    "j***@gmail.com",
+    "j***@alueducation.com",
+    "c***@company.io",
+    "a***@alumni.alueducation.com",
+    "j***@alueducation.com",
+    "r***@alueducation.com",
+    "j***@alueducation.com",
+    "s***@si.alueducation.com",
+    "s***@backup-service.net",
+    "s***@notalueducation.com",
+    "s***@alueducation.com.fake"
+  ],
+  "phones_international": [
+    "+250 788 123 456",
+    "+250-733-987-654",
+    "+250 (0) 722 555 666",
+    "+250 788 123 456",
+    "+250 (0) 722 555 666"
+  ],
+  "phones_local": [
+    "0789456123",
+    "0755000111"
+  ],
+  "credit_cards": [
+    "**** **** **** 1111",
+    "**** **** **** 2222",
+    "**** **** **** 4444",
+    "**** **** **** 1111"
+  ],
+  "urls": [
+    "https://paymentsystem.com",
+    "https://paymentsystem.com",
+    "https://api.paymentsystem.com/v1/checkout",
+    "https://paymentsystem.com/orders/99218?status=pending",
+    "https://attacker.com",
+    "http://paymentsystem.com",
+    "https://paymentsystem.com/orders/99218?status=pending",
+    "https://api.paymentsystem.com/v1/checkout",
+    "https://paymentsystem.com.",
+    "https://paymentsystem.com",
+    "https://paymentsystem.com"
+  ]
+}
